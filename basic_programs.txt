@@ -1,0 +1,481 @@
+1. 
+print("Hello World!")
+output: Hello World!
+
+2.
+text=input()
+print(text)
+output: Hello
+        Hello
+        
+3.
+training="Python"
+print("Hi, Welcome to {0} session!".format(training))
+output: Hi, Welcome to Python session!
+
+
+4. In shell prompt:
+'Hello'
+output: 'Hello'
+
+5. 
+10+20
+output: 30
+
+6.
+_
+output: 30
+
+7. 
+_*2
+output: 60
+
+8.
+3+2*4
+output: 11
+
+9.
+4/2
+output: 2.0
+
+10.
+4//2
+output: 2
+
+11. 
+for i in range(1,11):
+    print("7","*",i,"=",7*i)
+output:
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+
+12.
+s="hello"
+s*2
+output: 'hellohello'
+
+13. 
+s.upper()
+Output: 'HELLO'
+
+14. 
+print('A','B','C')
+print('A','B',sep='')
+print('A','B',sep="",end='@')
+print('12','12',sep='-',end="")   # Date
+print("Hello World!");xyz=10;print(xyz)  
+
+output: 
+A B C
+AB
+AB@12-12Hello World!
+10
+
+15.
+a=10
+b=20
+s=a+\
+   b
+print(s)
+output: 30
+
+16.
+a=10            # variable a holds integer value
+print(a)
+a="Hello World"
+print(a)        # same variable now holds string
+a=2+8j          # a holds a complex value
+print(a)
+
+output: 10
+Hello World
+(2+8j)
+
+17.
+# All 4 statements will give syntax error : Invalid syntax
+123Var ='python'
+Var@='Python'
+class='Python'
+123=1       # can't assign to literal 
+print(123)
+
+output: error
+
+18.IDENTIFIER:
+--------------
+Identifier is just name of the variable/class/function
+Ex: 
+MAX=50                      # variable name
+fib_series() or fibSeries() # function name
+class Employee():           # class name
+
+19. CONSTANTS:
+--------------
+Fixed values such as numbers, letters and strings are called constants
+Ex:
+MAX=50
+str="Hello World"
+a='B'
+
+20.
+a=b=c=5
+print(a,b,c)
+
+a,b,c,d=10,20.5,"Python",True
+print(a,b,c,d)
+print(d,c,b,a)
+
+Output: 
+5 5 5
+10 20.5 Python True
+True Python 20.5 10
+
+a=None=2      # can't assign to none, it will give error
+
+21. Literals:
+-------------
+A literal is a notation for representing a fixed value.
+ Python supports following literals:
+ 1. string literals
+        EX:     strVar="python"
+ 2. Numeric literals
+        EX:     intVar=100
+                floatVar=100.00
+                complexVar=complex(1,2)
+                
+ 3. Boolean literals
+        EX:     boolVar=True
+
+ 4. Special literals
+ 5. Literal collections.
+ 
+EX:     noneVar=None             Represents absence of a value
+        listVar=[1,2,3,4,5]      List literal
+        tupleVar=(1,2,3,4,5)     Tuple literal
+        setVar={1,2,3,4,5}       set literal
+        dictVar={1:"ONE",2:"TWO"} Dictionary literal
+        
+        
+22. format() function
+----------------------
+It returns a formatted representation of the given value controlled by the format specifier.
+syntax: format(value, "format_specifier")
+
+Ex-1:
+txt="My name is {fname}, I'm {age} years old.".format(fname="Dolly",age=2)
+print(txt)
+output: My name is Dolly, I'm 2 years old.
+
+Ex-2: 
+txt="My name is {0}, I'm {1} years old.".format("Dolly",2)
+print(txt)
+output: My name is Dolly, I'm 2 years old.
+
+Ex-3:
+txt="My name is {}, I'm {} years old.".format("Dolly",2)
+print(txt)
+output: My name is Dolly, I'm 2 years old.
+
+23. Datatypes:
+-------------
+Python is an onject-oriented language and as such it uses classes to define data types, including its primitive types.
+Every element in a python program is an object of a class.
+A number,string,list,dictionary,etc. used in a program is an object of a corresponding built-in class.
+
+Ex:
+a=10             # variable a is an object of class integer
+str="python"     # str is an object of class string
+value=12.34      # value is an object of class complex
+comp=2+j8        # comp is an object of class complex
+b=10             # b is an object that points to same memory location as a a and b are different object of same class integer
+a="python"       # a now becomes an object of string class and points to same memory location that str variable points to.
+
+24. type() function
+-------------------
+In python, the data type is set when you assign a value to a variable.
+type() function is used to get the data type of the variable.(i.e. it returns the class to which that variable is object of)
+
+Ex:
+a=10       
+type(a)
+output: <class 'int'>
+
+str="python"
+type(str)
+output: <class 'str'>
+
+value=12.34
+type(value)
+output: <class 'float'>
+
+comp=complex(2,3)               #complex() function is used to generate the complex numbers.
+type(comp)
+output: <class 'complex'>
+
+print(comp)
+output: (2+3j)
+
+
+25. Typecasting
+---------------
+Converting from one data type to another.
+There are 2 types of conversions.
+1. Implicit
+Ex:
+        a=10
+        b=0.5
+        c=0
+        type(c)
+        output: <class 'int'>
+        c=a+b
+        type(c)
+        output: <class 'float'>
+        
+2. Explicit
+Ex:
+        a=10
+        flaot(a)
+        output: 10.0
+        
+        b=10.5
+        int(b)
+        output: 10
+        
+        int("python")
+        gives Value error
+        
+        comp=complex(2,3)
+        print(comp)
+        output: (2+3j)
+        int(comp)
+        gives type error
+        
+        
+26. Data Conversion functions
+-----------------------------
+python library provides functions to convert the data from one type to another type.
+
+1. int() -> converts input value to integer
+s="100"                 f=35.4          b=True          s="python"      int('a)
+int(s)                  int(f)          int(b)          int(s)          output: value error
+output: 100             35              1               value error
+                                                        
+
+2. chr() -> takes a value and gives its ascii char
+s="65"          x=100           chr('#')                chr(1.5)
+chr(x)          chr(x)          output: type error      output: ?
+output: A       d
+
+
+3. ord() -> returns constant integer value of specified character
+x='A'           ord('a)         ord(1)
+ord(x)         output:  97      output: 49
+output: 65
+
+4. float() -> converts input value to float value
+s="23.3"         x=10           x="abc"
+float(s)         float(x)       flaot(x)
+output: 23.3     10.0           value error
+
+
+
+27. Math Operations:
+-------------------
+Below are some of the math opeartions that can be performed with in built functions
+import math module to access some of these functions.
+
+cmp(a,b)        # compare 2 numbers
+exp(a)          # exponential of 'a'
+ceil(a)         # smallest integer which is not less than 'a'
+floor(a)        # find the largest integer that is not larger a
+abs(a)          # absolute value of a
+sqrt(a)         # square root of a
+log(a)          # natural logarithmic value of a
+log10(a)        #base-10 algorithmic value of a
+
+Ex:
+        import math
+        math.ceil(10.7)
+        output: 11
+        
+        math.floor(12.3)
+        output: 12
+        
+        abs(-7)
+        output: 7
+        
+        math.sqrt(25)
+       output:  5.0
+        
+        math.log(10)
+        output: 2.302585092994046
+        
+        math.log10(10)
+        output: 1.0
+        
+
+28. id() function
+-----------------
+In python every object has its own unique id.
+Every time you create an object, a unique id is assigned to it.
+The id() function returns the identity of any python object
+This will return an integer identification number for different objects.
+
+id(1)                    x=1                      y='python'              id(1.0)                 id(1.00)
+output: 2776180719856    id(x)                    id(y)                   output: 2776220444304   output: 2776220445456
+                         output: 2776180719856   output: 2776221179248
+
+id(3)                   id(1+2)                 x=2+1
+output: 2776180719920   output:2776180719920    id(x)
+                                                output: 2776180719920
+                                                
+ Python stores the list of all the integers in sequential blocks, which are equally spaced. 
+ The difference between the id numbers of 2 integers is 2bytes.
+ 
+ id(1)                          id(2)                           id(3)
+ output: 2776180719856          output: 2776180719888           output: 2776180719920
+
+2776180719888 - 2776180719856                   2776180719920 - 2776180719888 
+output: 32                                      output: 32
+
+The underlying cPython implementation uses the id() function as the address of the object, in memory.
+
+is keyword is used for identity (id) comparison,
+while == operator is used for equality (value) comparison.
+
+x=10
+y=x
+print(x is y)        # x and y point to same memory location that has value 10 which is the object of class integer.
+output: True
+
+29. Function declaration:
+------------------------
+A function is declared using 'def' keyword'
+The block starts with a colon
+All the statements that belongs to the function definition takes one tab space or 4 spaces from the start of the function.
+
+Indentation must be followed strictly to avoid compile time errors and to get expected output
+
+Ex:
+        def sum():                                      # sum function definition starts with def keyword
+                print("In sum function")                # takes 4 spaces to be part of the function definition
+                return
+        def diff():                                     #diff fucntion definition
+                print("In diff function")
+                return
+        sum()                                           # function call to sum
+        diff()                                          # function call to diff
+        
+        output: 
+                In sum function
+                In diff function
+ 
+ 30. Local and Global Variables 
+ ------------------------------
+ Local variables belong to a function.
+ They can be function parameters or variables declared inside a function.
+ 
+ Ex-1:
+ def m1():
+        a=10     #local variable
+        print(a)
+        return
+ def m2():
+        print(a)    #name error
+        return
+ m1()
+ m2()
+ 
+ output: Name error  a is not defined
+ 
+ Ex-2:
+ def m1():
+        a=10   #local to m1
+        print(a)
+        return
+ def m2():
+        a=20    #local to m2
+        print(a)
+        return
+ m1()
+ m2()
+ 
+ output:
+        10
+        20
+
+Ex-3:
+def m1():
+        a=10    #local to m1
+        print(a)
+        return
+def m2(a):      #local to m2
+        print(a)
+        return
+m1()
+m2(20)
+
+output:
+        10
+        20
+
+
+Declaration of variable outside to all the functions is called a global variable.
+GLobal variables can be accessed from all the functions.
+Can be accessed inside the function but first priority is given to local variable.
+If local variable with same name is not available, then it will access global variable.
+
+We can't modify global variables directly within the functions.
+use global keyword to modify global variable inside a function.
+
+Ex-1:
+a=30    #global variable
+def m1():
+    print(a)
+    return
+def m2():
+    a=20    #local variable
+    print(a)
+    return
+m1()
+m2()
+output:
+        30
+        20
+        
+Ex-2:
+a=20
+def test():
+    a=a+10     #gives error
+    return
+test()
+
+output: local variable 'a' referenced before assignment
+
+Ex-3:
+a=20
+def test():
+    global a
+    a=a+10
+    print(a)    #inside function
+    return
+test()
+print(a)        # outside function
+
+output:
+        30
+        30
+
+
+
+
+
+
